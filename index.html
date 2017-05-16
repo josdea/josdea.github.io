@@ -1,393 +1,144 @@
-<!-- me learning bootstrap -->
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-  <title>The Josh Dean</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Portfolio Webpage</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
+
 <body>
+  <header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Josh Dean Portfolio</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#myProjects">My Projects</a></li>
+        <li><a href="#connect">Connect With Me</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="banner">
 
-<div class="container">
-  <h1>The Josh Dean.com</h1>
-  <p>I like Bee!</p>
-<br><br>
-<img src="images/turtle.jpg" class="img-rounded" width="304" alt=""/>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <p>The .container class provides a responsive fixed width container.</p>
-</div>
-  <div class="container-fluid">
-  <h1>My First Bootstrap Page</h1>
-  <p>This part is inside a .container-fluid class.</p>
-  <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>
-</div>
-  <div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <img id="bannerImg" src="https://www.dropbox.com/s/wl3ifepkmyshlhj/rockformation.jpg?raw=1" text="text" alt="rock formation" />
+    <h1>Josh Dean on the Web</h1>
   </div>
-</div>
-
-
+</header>
 <div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>
-  </div>
-</div>
-<div class="container">
-  <h1>Lighter, Secondary Text</h1>
-  <p>The small element is used to create a lighter, secondary text in any heading:</p>
-  <h1>h1 heading <small>secondary text</small></h1>
-  <h2>h2 heading <small>secondary text</small></h2>
-  <h3>h3 heading <small>secondary text</small></h3>
-  <h4>h4 heading <small>secondary text</small></h4>
-  <h5>h5 heading <small>secondary text</small></h5>
-  <h6>h6 heading <small>secondary text</small></h6>
-</div>
-  <div class="container">
-  <h1>Highlight Text</h1>
-  <p>Use the mark element to <mark>highlight</mark> text.</p>
-</div>
-  <div class="container">
-  <h1>Abbreviations</h1>
-  <p>The abbr element is used to mark up an abbreviation or acronym:</p>
-  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-</div>
-<div class="container">
-  <h1>Blockquotes</h1>
-  <p>The blockquote element is used to present content from another source:</p>
-  <blockquote>
-    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-    <footer>From WWF's website</footer>
-  </blockquote>
-</div>
-  <div class="container">
-  <h1>Blockquotes</h1>
-  <p>To show the quote on the right use the class .blockquote-reverse:</p>
-  <blockquote class="blockquote-reverse">
-    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-    <footer>From WWF's website</footer>
-  </blockquote>
-</div>
-  <div class="container">
-  <h1>Description Lists</h1>
-  <p>The dl element indicates a description list:</p>
-  <dl>
-    <dt>Coffee</dt>
-    <dd>- black hot drink</dd>
-    <dt>Milk</dt>
-    <dd>- white cold drink</dd>
-  </dl>
-</div>
+  <main>
+    <br />
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 id="aboutMe"><a href="#" title="go to top">About Me</a></h2>
+        <p>Instructional technology specialist at <a href="http://www.pstcc.edu/" target="_blank">Pellissippi State Community College</a>. I specialize in Learning Management Systems such as: <a target="_blank" href="https://www.d2l.com/">Brightspace D2L</a>,
+          <a href="http://www.blackboard.com/" target="_blank">BlackBoard</a>, and <a href="https://www.canvaslms.com/" target="_blank">Canvas</a>. I also work with accessible content for the web, virtual classrooms with <a href="http://www.adobe.com/products/adobeconnect.html"
+            target="_blank">Adobe Connect</a>, and other educational technologies.
 
-  <div class="container">
-  <h1>Code Snippets</h1>
-  <p>Inline snippets of code should be embedded in the code element:</p>
-  <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
-</div>
-<div class="container">
-  <h1>Keyboard Inputs</h1>
-  <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
-  <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
-</div>
-  <div class="container">
-<h1>Multiple Code Lines</h1>
-<p>For multiple lines of code, use the pre element:</p>
-<pre>
-Text in a pre element
-is displayed in a fixed-width
-font, and it preserves
-both      spaces and
-line breaks.
-</pre>
-</div>
-  <div class="container">
-  <h2>Contextual Colors</h2>
-  <p>Use the contextual classes to provide "meaning through colors":</p>
-  <p class="text-muted">This text is muted.</p>
-  <p class="text-primary">This text is important.</p>
-  <p class="text-success">This text indicates success.</p>
-  <p class="text-info">This text represents some information.</p>
-  <p class="text-warning">This text represents a warning.</p>
-  <p class="text-danger">This text represents danger.</p>
-</div>
-  <div class="container">
-  <h2>Contextual Backgrounds</h2>
-  <p>Use the contextual background classes to provide "meaning through colors":</p>
-  <p class="bg-primary">This text is important.</p>
-  <p class="bg-success">This text indicates success.</p>
-  <p class="bg-info">This text represents some information.</p>
-  <p class="bg-warning">This text represents a warning.</p>
-  <p class="bg-danger">This text represents danger.</p>
-</div>
-<div class="container">
-  <h2>Basic Table</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <div class="container">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <h2>Bordered Table</h2>
-  <p>The .table-bordered class adds borders to a table:</p>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <h2>Hover Rows</h2>
-  <p>The .table-hover class enables a hover state on table rows:</p>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <h2>Condensed Table</h2>
-  <p>The .table-condensed class makes a table more compact by cutting cell padding in half:</p>
-  <table class="table table-condensed">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <h2>Contextual Classes</h2>
-  <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="success">
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <h2>Table</h2>
-  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
-  <div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
-        <th>City</th>
-        <th>Country</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Anna</td>
-        <td>Pitt</td>
-        <td>35</td>
-        <td>New York</td>
-        <td>USA</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-</div>
-<div class="container">
-  <h2>Thumbnail</h2>
-  <p>The .img-thumbnail class creates a thumbnail of the image:</p>
-  <img src="http://www.w3schools.com/bootstrap/cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-</div>
+        </p>
+        <p>The more I learn the more my interests change. I've been learning more and more about SQL databses, javascript, and javascript frameworks. I've begun to dabble with AngularJS, NodeJS and MongoDB.</p>
+      </div>
+      <div class="col-sm-4"><img id="profileImg" src="https://www.dropbox.com/s/irltt92dt0z2gcu/psccpicsquare.jpg?raw=1" alt="" /></div>
+      <!--     end of row -->
+    </div>
 
-  <div class="container">
-  <h2>Rounded Corners</h2>
-  <p>The .img-rounded class adds rounded corners to an image (not available in IE8):</p>
-  <img src="http://www.w3schools.com/bootstrap/cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
-</div>
-  <div class="container">
-  <h2>Circle</h2>
-  <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>
-  <img src="http://www.w3schools.com/bootstrap/cinqueterre.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
-</div>
-<div class="container">
-  <h2>Image</h2>
-  <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
-  <img class="img-responsive" src="http://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="460" height="345">
-</div>
-  <div class="container">
-  <h2>Image Gallery</h2>
-  <p>The .thumbnail class can be used to display an image gallery. Click on the images to see it in full size:</p>
-  <div class="row">
-    <div class="col-md-4">
-      <a href="http://www.w3schools.com/bootstrap/pulpitrock.jpg" class="thumbnail">
-        <p>Pulpit Rock: A famous tourist attraction in Forsand, Ryfylke, Norway.</p>
-        <img src="http://www.w3schools.com/bootstrap/pulpitrock.jpg" alt="Pulpit Rock" style="width:150px;height:150px">
-      </a>
+    <h2 id="myProjects"><a href="#" title="go to top">My Projects</a></h2>
+    <p>Here are a few projects I've been working on</p>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Graphing with the Desmos API</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="zBvRBN" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Desmos Graphing Interactive API Examples with Bell Curve" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/zBvRBN/">Desmos Graphing Interactive API Examples with Bell Curve</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Random Tip from a JSON file</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="OXyQpq" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Random Tip of the day External JSON array" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/OXyQpq/">Random Tip of the day External JSON array</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">JS CountDown Timer</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="GqpQmP" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Countdown Timer Progress background" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/GqpQmP/">Countdown Timer Progress background</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Cylinder and Prism Area Calculator - Angular</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="LWMBoV" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="AngularJS - Cylinder / Rectangular Prism Area/Volume Calculator" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/LWMBoV/">AngularJS - Cylinder / Rectangular Prism Area/Volume Calculator</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Passcode Released Content - AngularJS</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="BRLVdp" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Passcode Released DIVs Angular JS" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/BRLVdp/">Passcode Released DIVs Angular JS</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">XML Generator and .txt File Download</div>
+          <div class="panel-body">
+            <p data-height="265" data-theme-id="0" data-slug-hash="PmqMaE" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="XML Sitemap Generator for D2L and file download" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/PmqMaE/">XML Sitemap Generator for D2L and file download</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </div>
+      <!--     end of row -->
+      <br />
+
     </div>
-    <div class="col-md-4">
-      <a href="http://www.w3schools.com/bootstrap/moustiers-sainte-marie.jpg" class="thumbnail">
-        <p>Moustiers-Sainte-Marie: Considered as one of the "most beautiful villages of France".</p>
-        <img src="http://www.w3schools.com/bootstrap/moustiers-sainte-marie.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px">
-      </a>
+    <div class="panel panel-default">
+      <div class="panel-heading">Accessible Math Content with Embedded Latex Code</div>
+      <div class="panel-body">
+        <p data-height="265" data-theme-id="0" data-slug-hash="rLOJxL" data-default-tab="html,result" data-user="josdea" data-embed-version="2" data-pen-title="MathJax Inline TeX Example" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/rLOJxL/">MathJax Inline TeX Example</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
     </div>
-    <div class="col-md-4">
-      <a href="http://www.w3schools.com/bootstrap/cinqueterre.jpg" class="thumbnail">
-        <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>
-        <img src="http://www.w3schools.com/bootstrap/cinqueterre.jpg" alt="Cinque Terre" style="width:150px;height:150px">
-      </a>
-    </div>
-  </div>
+
+    <h2 id="connect"><a href="#" title="go to top">Connect With Me</a></h2>
+    <p>Thank you for taking the time to look at a few of my projects. If you'd like to see more then I am happy to share!</p>
+    <ul>
+      <li><a href="https://codepen.io/josdea/" target="_blank">All CodePen Projects</a> </li>
+      <li><a href="https://github.com/josdea" target="_blank">Github Projects</a> </li>
+      <li><a href="http://blogs.pstcc.edu/elearn/" target="_blank">LMS Documentation Blog</a> </li>
+      <li><a href="https://www.teacherspayteachers.com/Store/Joshua-Dean" target="_blank">Teachers Pay Teachers Store</a> </li>
+    </ul>
+  </main>
+  <footer>
+    <hr />
+    <p>Written and coded by <a href="mailto:josdea@gmail.com?Subject=Portfolio Page on Codepen" target="_top">Joshua Dean</a> (May 2017)</p>
+  </footer>
+  <!-- end of container -->
 </div>
-  <div class="container">
-  <h2>Responsive Embed</h2>
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_vhf0RZg0fg?wmode=opaque"></iframe>
-  </div>
-</div>
-<!--   start next time on jumbotron lesson -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
 </body>
 </html>
