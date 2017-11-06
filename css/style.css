@@ -8,27 +8,17 @@
   padding-left: 3px;
 }
 
+.panel-body img{
+  max-width: 100%;
+  max-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #bannerImg {
-  opacity: 0.4;
-  height: 400px;
+  opacity: 0.5;
   width: 100%;
-}
-
-h1 {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  text-align: center;
-  /*   color: white; */
-  opacity: 1;
-     background-color: rgba(255, 255, 255, 0.5);
-}
-
-div#banner {
-  display: inline-flex;
-  position: relative;
 }
 
 .navbar {
@@ -40,18 +30,21 @@ div#banner {
   margin-right: auto;
   display: block;
   width: 45%;
-  max-width: 300px;
+  max-width: 150px;
     
 }
 
 h2 a:visited,
 h2 a:active,
-h2 a {
+h2 a,
+h3 a:visited,
+h3 a:active,
+h3 a {
   text-decoration: none;
   color: inherit;
 }
 
-h2 a:hover {
+h2 a:hover, h3 a:hover {
   color: inherit;
 }
 
@@ -59,8 +52,12 @@ h2 {
   font-size: 2.4em;
 }
 
+h3{
+  font-size: 2em;
+}
+
 p {
-  line-height: 2.5em;
+  line-height: 2em;
 }
 
 footer p {

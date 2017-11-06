@@ -1,176 +1,245 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio Webpage</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  <script src="js/ga.js"></script>
-</head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/style.css"> </head>
 
 <body>
   <header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Josh Dean Portfolio</a>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">the<strong>Josh</strong>Dean.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <!-- <li class="active">
+            <a href="#">Home</a>
+          </li> -->
+          <li>
+            <a href="#aboutMe">About Me</a>
+          </li>
+          <li>
+            <a href="#myProjects">My Projects</a>
+          </li>
+          <li>
+            <a href="#connect">Connect With Me</a>
+          </li>
+        </ul>
       </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#aboutMe">About Me</a></li>
-        <li><a href="#myProjects">My Projects</a></li>
-        <li><a href="#connect">Connect With Me</a></li>
+    </nav>
+    <div id="banner">
+      <img id="bannerImg" src="./images/sandbanner.jpg" text="text" alt="sandscape banner" /> </div>
+  </header>
+  <div class="container-fluid">
+    <main>
+      <h2 id="aboutMe">
+        <a href="#" title="go to top">About Me</a>
+      </h2>
+      <div class="row">
+        <div class="col-sm-8">
+          <p>Instructional technology specialist at
+            <a href="http://www.pstcc.edu/" target="_blank">Pellissippi State Community College</a>. I specialize in Learning Management Systems such as:
+            <a target="_blank"
+              href="https://www.d2l.com/">Brightspace D2L</a>,
+            <a href="http://www.blackboard.com/" target="_blank">BlackBoard</a>, and
+            <a href="https://www.canvaslms.com/" target="_blank">Canvas</a>. I also work with accessible content for the web, virtual classrooms with
+            <a href="http://www.adobe.com/products/adobeconnect.html"
+              target="_blank">Adobe Connect</a>, and other educational technologies. </p>
+          <p>The more I learn the more my interests change. I've been learning more and more about Oracle SQL databses, javascript,
+            and javascript frameworks like VueJS.</p>
+        </div>
+        <div class="col-sm-4">
+          <img id="profileImg" src="./images/psccpicsquare.jpg" alt="josh dean profile icon" /> </div>
+      </div>
+      <h2 id="myProjects">
+        <a href="#" title="go to top">My Projects</a>
+      </h2>
+      <p>Here are a few projects I've been working on</p>
+      <div class="panel panel-default">
+        <div class="panel-heading">Syllabus Management Program</div>
+        <div class="panel-body">
+          <p>Custom built
+            <a href="http://syllabus.thejoshdean.com" target="_blank">Syllabus Management Program </a> for Master Syllabi. Fully accessible and stored in a SQLite database for easy
+            online updating. <a href="#" onclick="doorbell.show();">Contact Me</a> if you need a custom syllabus solution.</p>
+          <div class="row">
+            <img class="col-sm-4" src="./images/syllabusmgt.png" alt="screenshot syllabus management homepage">
+            <img class="col-sm-4" src="./images/syllabus.png" alt="screenshot syllabus sample">
+            <img class="col-sm-4" src="./images/syllabusedit.png" alt="screenshot syllabus editing mode"> </div>
+        </div>
+        <div class="panel-footer">Tags: VueJs, SQLite, PHP, Bootstrap</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Custom Markdown Editor</div>
+            <div class="panel-body">
+              <p>
+                <a href="http://thejoshdean.com/markdowneditor/" target="_blank">Custom Markdown Editor</a> with Mathjax and code highlighting. See the output and the HTML code.</p>
+              <img
+                src="./images/markdown.png" alt="screenshot grade item site">
+            </div>
+            <div class="panel-footer">Tags: VueJs, HighlightJS, LocalStorage, MarkedJS, MathJax</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Button Course Jump Page from JSON</div>
+            <div class="panel-body">
+              <p>
+                <a href="https://codepen.io/josdea/pen/eRBJbb" target="_blank">Resource Button Jump Page</a>. Buttons are automatically generated from JSON object list.</p>
+              <img src="./images/jumppage.png"
+                alt="screenshot jump page"> </div>
+            <div class="panel-footer">Tags: AngularJS, Bootstrap, FontAwesome, Animate.css</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Font Awesome Printable Reference Poster</div>
+            <div class="panel-body">
+              <p>
+                <a href="https://codepen.io/josdea/pen/owEbag" target="_blank">Font Awesome Grid</a> for printing or reference.</p>
+              <img src="./images/fontawe.png" alt="screenshot icons"> </div>
+            <div class="panel-footer">Tags: Angular, Bootstrap 4, FontAwesome
+              <div> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Accessible Math</div>
+        <div class="panel-body">
+          <p>Examples of using
+            <a href="https://codepen.io/josdea/pen/rLOJxL" target="_blank">TeX code in Markdown</a> and the MathJax javascript library to generate accessible Math. </p>
+          <img src="./images/mathexamples.png"
+            alt="screenshot math examples in mathjax and markdown">
+          <br>
+          <p>See a
+            <a href="https://josdea.github.io/fusion2017">Markdown Accessible Math Presentation</a> - ed-tech D2L Fusion Conference 2017</p>
+          <form action="https://codepen.io/pen/define"
+            method="POST" target="_blank">
+            <input type="hidden" name="data" value='{"title": "Markdown Math", "editors": "100", "html_pre_processor": "markdown", "css_external": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css", "js_external": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML", "head": "<meta name="viewport" content="width=device-width">", "css": "body{padding:5px;}", "html": "\n\n# Put Markdown Here\n\n\\\\(x^2+14=2\\\\)\n\n"}'>
+            <input type="submit" value="Create New Codepen with Markdown / Mathjax / Boostrap"> </form>
+        </div>
+        <div class="panel-footer">Tags: Markdown, TeX, MathJax, Bootstrap, Accessibility</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Container Calculator - Cylinder and Prism</div>
+            <div class="panel-body">
+              <p> Playing with AngularJS and data binding in a
+                <a href="https://codepen.io/josdea/pen/LWMBoV" target="_blank">Container Calculator</a>
+              </p>
+              <img src="./images/containercalc.png" alt="screenshot calculator"> </div>
+            <div class="panel-footer">Tags: AngularJS, Bootstrap</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Desmos Graphing API Example</div>
+            <div class="panel-body">
+              <p>Dynamic Interactive Bell Curve graphing using the
+                <a href="https://codepen.io/josdea/pen/zBvRBN" target="_blank">Desmos API</a>.</p>
+              <img src="./images/desmosapi.png" alt="screenshot desmos graph bell curve"> </div>
+            <div class="panel-footer">Tags: Desmos.com, API</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Vue Component Countdown Timer Until Date</div>
+            <div class="panel-body">
+              <p> Playing with Vue Components to countdown until a specified date.
+                <a href="https://codepen.io/josdea/pen/EXeopN"
+                  target="_blank">Countdown Timer</a>
+              </p>
+              <img src="./images/countdown.png" alt="screenshot countdown timer"> </div>
+            <div class="panel-footer">Tags: VueJs, VueComponents, Bootstrap 4</div>
+          </div>
+        </div>
+      </div>
+      <h3 id="d2l">
+        <a href="#" title="go to top">Brightspace D2L Tools</a>
+      </h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Brightspace D2L Grade Item Generator</div>
+            <div class="panel-body">
+              <p>
+                <a href="http://thejoshdean.com/d2ltools/gradeitems.html" target="_blank">Grade Item Generator</a> for Brightspace D2L. Quickly generate multiple grade items to import into your course.</p>
+              <img src="./images/gradegen.png" alt="screenshot grade item site"> </div>
+            <div class="panel-footer">Tags: VueJs, Bootstrap</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Brightspace D2L Bulk Dataset Downloader</div>
+            <div class="panel-body">
+              <p>
+                <a href="http://thejoshdean.com/d2ltools/dataset.html" target="_blank">Dataset Downloader</a> for Brightspace D2L. Quickly download multiple datasets from your Brightspace D2L
+                instance. </p>
+              <img src="./images/datasets.png" alt="screenshot data set site"> </div>
+            <div class="panel-footer">Tags: VueJs, Bootstrap</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Brightspace D2L Objectives Generator</div>
+            <div class="panel-body">
+              <p>
+                <a href="http://thejoshdean.com/d2ltools/xmlobjectives.html" target="_blank">Objectives Generator</a> for Brightspace D2L. Quickly generate Brightspace Objectives from an MS Excel sheet
+                or list. Download, zip, and import into your course.</p>
+              <img src="./images/objectives.png" alt="screenshot objectives xml site"> </div>
+            <div class="panel-footer">Tags: VueJs, Bootstrap</div>
+          </div>
+        </div>
+      </div>
+      <!-- <h3 id="misc"> <a href="#" title="go to top">Misc. Snippets</a> </h3> -->
+      <h2 id="connect">
+        <a href="#" title="go to top">Connect With Me</a>
+      </h2>
+      <p>Thank you for taking the time to look at a few of my projects. If you'd like to see more then I am happy to share!</p>
+      <ul>
+        <li> Github:
+          <a href="https://github.com/josdea" target="_blank">https://github.com/josdea</a>
+        </li>
+           <li> Codepen:
+          <a href="https://codepen.io/josdea/" target="_blank">https://codepen.io/josdea/</a>
+        </li>
+        <li>
+          <a href="http://blogs.pstcc.edu/elearn/" target="_blank">LMS Documentation Blog</a>
+        </li>
+        <li>
+          <a href="https://www.teacherspayteachers.com/Store/Joshua-Dean" target="_blank">Teachers Pay Teachers Store</a>
+        </li>
       </ul>
-    </div>
-  </nav>
-  <div id="banner">
-
-    <img id="bannerImg" src="https://www.dropbox.com/s/wl3ifepkmyshlhj/rockformation.jpg?raw=1" text="text" alt="rock formation" />
-    <h1>Josh Dean on the Web</h1>
+    </main>
+    <footer>
+      <hr>
+      <p>Written and coded by
+        <a href="#connect" onclick="doorbell.show();">Joshua Dean</a>
+        <!-- <a href="mailto:josdea@gmail.com?Subject=Portfolio Page" target="_top">Joshua Dean</a>  -->
+        (May 2017)</p>
+    </footer>
   </div>
-</header>
-<div class="container-fluid">
-  <main>
-    <br />
-    <div class="row">
-      <div class="col-sm-8">
-        <h2 id="aboutMe"><a href="#" title="go to top">About Me</a></h2>
-        <p>Instructional technology specialist at <a href="http://www.pstcc.edu/" target="_blank">Pellissippi State Community College</a>. I specialize in Learning Management Systems such as: <a target="_blank" href="https://www.d2l.com/">Brightspace D2L</a>,
-          <a href="http://www.blackboard.com/" target="_blank">BlackBoard</a>, and <a href="https://www.canvaslms.com/" target="_blank">Canvas</a>. I also work with accessible content for the web, virtual classrooms with <a href="http://www.adobe.com/products/adobeconnect.html"
-            target="_blank">Adobe Connect</a>, and other educational technologies.
+  <script src="js/ga.js"></script> </body>
+<script type="text/javascript">
+  window.doorbellOptions = {
+    appKey: 'TBagEOBNlwxkQP0rCgJL8a4WZOklmZrqpwjDCwL5Ma0OmXipZIDkcWgVRvJtuAnA'
+  };
+  (function (w, d, t) {
+    var hasLoaded = false;
+    function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t); g.id = 'doorbellScript'; g.type = 'text/javascript'; g.async = true; g.src = 'https://embed.doorbell.io/button/7315?t=' + (new Date().getTime()); (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(g); }
+    if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+    if (d.readyState == 'complete') { l(); }
+  }(window, document, 'script'));
+</script>
 
-        </p>
-        <p>The more I learn the more my interests change. I've been learning more and more about SQL databses, javascript, and javascript frameworks. I've begun to dabble with AngularJS, VueJS, Node, and MongoDB.</p>
-      </div>
-      <div class="col-sm-4"><img id="profileImg" src="https://www.dropbox.com/s/irltt92dt0z2gcu/psccpicsquare.jpg?raw=1" alt="" /></div>
-      <!--     end of row -->
-    </div>
-
-    <h2 id="myProjects"><a href="#" title="go to top">My Projects</a></h2>
-    <p>Here are a few projects I've been working on</p>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Graphing with the Desmos API</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="zBvRBN" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Desmos Graphing Interactive API Examples with Bell Curve" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/zBvRBN/">Desmos Graphing Interactive API Examples with Bell Curve</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Random Tip from a JSON file</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="OXyQpq" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Random Tip of the day External JSON array" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/OXyQpq/">Random Tip of the day External JSON array</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">JS CountDown Timer</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="GqpQmP" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Countdown Timer Progress background" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/GqpQmP/">Countdown Timer Progress background</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Cylinder and Prism Area Calculator - Angular</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="LWMBoV" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="AngularJS - Cylinder / Rectangular Prism Area/Volume Calculator" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/LWMBoV/">AngularJS - Cylinder / Rectangular Prism Area/Volume Calculator</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Passcode Released Content - AngularJS</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="BRLVdp" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Passcode Released DIVs Angular JS" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/BRLVdp/">Passcode Released DIVs Angular JS</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">XML Generator and .txt File Download</div>
-          <div class="panel-body">
-            <p data-height="265" data-theme-id="0" data-slug-hash="PmqMaE" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="XML Sitemap Generator for D2L and file download" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/PmqMaE/">XML Sitemap Generator for D2L and file download</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-            <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Button Jump Page Structure Generated from AngularJS</div>
-          <div class="panel-body">
-           <p data-height="265" data-theme-id="0" data-slug-hash="eRBJbb" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Math 1530 Jump Page" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/eRBJbb/">Math 1530 Jump Page</a> by Dean (<a href="https://codepen.io/josdea">@josdea</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-
-                  <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Font Awesome Cheat Sheet - AngularJS Generated</div>
-          <div class="panel-body">
-          <p data-height="292" data-theme-id="0" data-slug-hash="owEbag" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Font Awesome Cheat Sheet" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/owEbag/">Font Awesome Cheat Sheet</a> by Dean (<a href="https://codepen.io/josdea">@josdea</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-
-                        <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Countdown Timer Until Date - with VueJS</div>
-          <div class="panel-body">
-         <p data-height="265" data-theme-id="0" data-slug-hash="EXeopN" data-default-tab="result" data-user="josdea" data-embed-version="2" data-pen-title="Countdown Timer Until Date Vue JS" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/EXeopN/">Countdown Timer Until Date Vue JS</a> by Dean (<a href="https://codepen.io/josdea">@josdea</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-      </div>
-
-      <!--     end of row -->
-      <br />
-
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">Accessible Math Content with Embedded Latex Code</div>
-      <div class="panel-body">
-        <p data-height="265" data-theme-id="0" data-slug-hash="rLOJxL" data-default-tab="html,result" data-user="josdea" data-embed-version="2" data-pen-title="MathJax Inline TeX Example" class="codepen">See the Pen <a href="https://codepen.io/josdea/pen/rLOJxL/">MathJax Inline TeX Example</a> by Dean (<a href="http://codepen.io/josdea">@josdea</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-      </div>
-    </div>
-
-    <h2 id="connect"><a href="#" title="go to top">Connect With Me</a></h2>
-    <p>Thank you for taking the time to look at a few of my projects. If you'd like to see more then I am happy to share!</p>
-    <ul>
-      <li><a href="https://josdea.github.io/markdowneditor/">My Custom Markdown Editor</a> with local storage, VueJS, HighlightJS, and MarkedJS</li>
-      <li>A <a href="https://josdea.github.io/fusion2017">Markdown Accessible Math Presentation</a> - ed-tech D2L Fusion Conference 2017</li>
-      <li><a href="https://codepen.io/josdea/" target="_blank">All CodePen Projects</a> </li>
-      <li><a href="https://github.com/josdea" target="_blank">Github Projects</a> </li>
-      <li><a href="http://blogs.pstcc.edu/elearn/" target="_blank">LMS Documentation Blog</a> </li>
-      <li><a href="https://www.teacherspayteachers.com/Store/Joshua-Dean" target="_blank">Teachers Pay Teachers Store</a> </li>
-    </ul>
-  </main>
-  <footer>
-    <hr />
-    <p>Written and coded by <a href="mailto:josdea@gmail.com?Subject=Portfolio Page on Codepen" target="_top">Joshua Dean</a> (May 2017)</p>
-  </footer>
-  <!-- end of container -->
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-
-    <script src="js/index.js"></script>
-
-</body>
 </html>
