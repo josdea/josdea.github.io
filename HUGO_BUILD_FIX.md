@@ -55,11 +55,14 @@ After making these changes, the build should:
 3. Deploy successfully to gh-pages
 
 ## Commit on hugo branch
-A commit has been prepared on the `hugo` branch with these changes:
-- Commit hash: be96616
+A commit was prepared on the `hugo` branch with these changes:
+- Commit hash: be96616 (local commit that couldn't be pushed)
 - Message: "Fix Hugo build: add submodules, update theme to v1.16.2, add Dart Sass"
 
-However, this commit cannot be pushed from this environment. The user needs to:
-1. Manually cherry-pick or apply these changes to the hugo branch
-2. OR merge this fix branch into hugo
-3. OR manually make the changes described above
+However, this commit cannot be pushed from this environment due to authentication limitations.
+
+## How to Apply the Fix
+The user should apply these changes to the `hugo` branch by either:
+1. Merging the `copilot/fix-hugo-build-issue` branch into `hugo`
+2. Cherry-picking the relevant commits
+3. Manually updating the files as described above
