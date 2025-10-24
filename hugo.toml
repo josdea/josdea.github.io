@@ -2,7 +2,38 @@ baseURL = 'https://thejoshdean.com/'
 languageCode = 'en-us'
 title = 'Josh Dean'
 theme = "anatole"
-profilePicture = "images/profile.jpg"
+
+ 
+[params]
+  profilePicture = "images/profile.jpg"
+  Title = "Josh Dean"
+  Description = "Portfolio, experiments, things learned, and things that I'm learning!"
+  mainSections = ["posts", "portfolio"]
+  singleDateFormat = "2/1/2006"
+  indexDateFormat = "2/1/2006"
+  listDateFormat = "2/1/2006"
+  [[params.socialIcons]]
+    icon = "fa-brands fa-linkedin"
+    title = "Linkedin"
+    url = "https://www.linkedin.com/in/josdea/"
+
+  [[params.socialIcons]]
+    icon = "fa-brands fa-github"
+    title = "GitHub"
+    url = "https://github.com/josdea"
+
+  [[params.socialIcons]]
+    icon = "fa-brands fa-instagram"
+    title = "instagram"
+    url = "https://www.instagram.com/josdea/"
+
+  [[params.socialIcons]]
+    icon = "fa-solid fa-envelope"
+    title = "e-mail"
+    url = "mailto:josdea@gmail.com"
+
+
+
 
 [menu]
 
@@ -41,3 +72,4 @@ profilePicture = "images/profile.jpg"
 # Enable Disqus.Disqus.Shortname
   [services.disqus]
     shortname = '@josdea'
+

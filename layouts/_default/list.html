@@ -2,7 +2,14 @@
   <div class="section-content">
     {{ .Content }}
   </div>
-  {{ range .Pages }}
+
+  {{/* Prefer .Pages (children) but fall back to .RegularPages if empty (some templates return different collections) */}}
+  {{ $pages := .Pages }}
+  {{ if not (len $pages) }}
+    {{ $pages = .RegularPages }}
+  {{ end }}
+
+  {{ range $pages }}
     <article>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <p>{{ .Summary }}</p>

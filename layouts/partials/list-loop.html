@@ -1,0 +1,83 @@
+{{/*
+  Shared list loop partial.
+  Usage examples:
+    {{ partial "list-loop.html" (dict "ctx" . "pages" .Pages) }}
+    {{ partial "list-loop.html" (dict "ctx" . "pages" (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)) }}
+
+  Expects a dict with keys:
+    - ctx: the page context (usually `.`)
+    - pages: the collection to paginate (optional; defaults to ctx.Pages)
+*/}}
+
+{{ $ctx := .ctx }}
+{{ $pages := .pages }}
+{{ if not $pages }}
+  {{ $pages = $ctx.Pages }}
+{{ end }}
+
+{{ $paginator := $ctx.Paginate $pages }}
+
+{{ range $paginator.Pages }}
+  <div
+    class="post {{ with $ctx.Site.Params.doNotLoadAnimations }}
+      .
+    {{ else }}
+      animated fadeInDown
+    {{ end }}"
+  >
+    {{ if .Params.thumbnail }}
+      <div class="post__thumbnail-wrapper">
+        <a href="{{ .RelPermalink }}">
+          <img class="post__thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" loading="lazy" />
+        </a>
+      </div>
+    {{ end }}
+    <div class="post__content">
+      {{ if (eq $ctx.Site.Params.disableTitleCapitalization true) }}
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ else }}
+        <h3><a href="{{ .RelPermalink }}">{{ upper .Title }}</a></h3>
+      {{ end }}
+      {{ if $ctx.Site.Params.fullPostContent }}
+        <p>{{ .Content | safeHTML | plainify }}</p>
+      {{ else }}
+        <p>{{ .Summary | safeHTML | plainify }}</p>
+      {{ end }}
+      {{- if and (.Truncated) ($ctx.Site.Params.readMore) -}}
+        <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+      {{- end -}}
+    </div>
+
+    <div class="post__footer">
+      <em class="fas fa-calendar-day"></em>
+      <span class="post__footer-date"
+        >{{ if isset $ctx.Site.Params "indexdateformat" }}
+          {{ if $ctx.Site.Params.localizedDates }}
+            {{ time.Format $ctx.Site.Params.indexDateFormat .Date }}
+          {{ else }}
+            {{ .Date.Format $ctx.Site.Params.indexDateFormat }}
+          {{ end }}
+
+        {{ else }}
+          {{ if $ctx.Site.Params.localizedDates }}
+            {{ time.Format "Mon, Jan 2, 2006" .Date }}
+          {{ else }}
+            {{ .Date.Format "Mon, Jan 2, 2006" }}
+          {{ end }}
+
+        {{ end }}</span
+      >
+      {{ with .Params.Categories }}
+        {{ partial "taxonomy/categories.html" . }}
+      {{ end }}
+
+      {{ with .Params.Tags }}
+        {{ partial "taxonomy/tags.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
+
+<div class="pagination">
+  {{ partial "pagination.html" $ctx }}
+</div>
