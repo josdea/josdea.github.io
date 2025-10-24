@@ -1,1 +1,9 @@
-public/
+# Hugo build output
+/public/
+
+# Hugo cache / generated resources
+/resources/_gen/
+
+# OS or editor files
+.DS_Store
+Thumbs.db
