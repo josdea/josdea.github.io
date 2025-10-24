@@ -4,4 +4,4 @@ draft = false
 title = 'First Post'
 +++
 
-first post
+This is a first post on my new hugo site. Check out some portfolio items of things I've made in the past. 

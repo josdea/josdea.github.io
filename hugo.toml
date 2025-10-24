@@ -9,9 +9,10 @@ theme = "anatole"
   Title = "Josh Dean"
   Description = "Portfolio, experiments, things learned, and things that I'm learning!"
   mainSections = ["posts", "portfolio"]
-  singleDateFormat = "2/1/2006"
-  indexDateFormat = "2/1/2006"
-  listDateFormat = "2/1/2006"
+  favicon = "images/"
+  singleDateFormat = "01/02/2006"
+  indexDateFormat = "01/02/2006"
+  listDateFormat = "01/02/2006"
   [[params.socialIcons]]
     icon = "fa-brands fa-linkedin"
     title = "Linkedin"

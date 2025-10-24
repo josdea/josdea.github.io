@@ -44,89 +44,124 @@ Use standard blog-style structure.
 
 May include categories and tags.
 
-Example front matter:
+# Copilot / Contributor Instructions
 
-toml
-Copy code
-+++
+This file documents setup, structure, and conventions for this Hugo-based personal site. It helps collaborators and automation understand where content lives, how to add pages, and how to make small overrides safely.
+
+---
+
+## Project overview
+
+- Hugo site using the Anatole theme.
+- Source lives on the `hugo` branch; site publishes to GitHub Pages at `thejoshdean.com`.
+
+## Repo layout (important locations)
+
+```text
+.
+├── archetypes/                # content templates
+├── assets/                    # build assets (scss/js)
+├── content/                   # site content (posts, portfolio, pages)
+│   ├── posts/
+│   └── portfolio/
+├── layouts/                   # site-level template overrides
+│   ├── _default/single.html    # featured image support
+│   └── partials/list-loop.html # shared list loop used by posts/portfolio
+├── static/                    # copied to public/ (images, favicon, etc.)
+│   └── images/
+├── themes/                    # installed theme (anatole)
+└── hugo.toml                  # site configuration (this repo uses hugo.toml)
+```
+
+## Content conventions
+
+### Posts
+
+Create a new post with:
+
+```bash
+hugo new posts/post-title.md
+```
+
+Use TOML front matter (the project convention is `+++` blocks). Include `date`, `draft`, `categories`, and `tags`.
+
+Example:
+
+```toml
+++ 
 title = "Post Title"
 date = 2025-01-15T12:00:00-04:00
 draft = false
 categories = ["Thoughts"]
 tags = ["python", "learning"]
-+++
-Portfolio Items
-Created using hugo new portfolio/project-name.md
+++
+```
 
-Treated like posts but focused on projects or builds.
+### Portfolio items
 
-Usually have an image and tags for technology used.
+Keep portfolio content in `content/portfolio/`. Treat these like posts, but set `categories = ["Portfolio"]` and include an `image` if you want a featured image shown on the single page.
 
-Example front matter:
+Example:
 
-toml
-Copy code
-+++
+```toml
+++ 
 title = "Accessible Math Content"
 date = 2018-07-01T14:24:38-04:00
 draft = false
 categories = ["Portfolio"]
 tags = ["math", "mathml", "latex"]
 image = "/images/accessible-math-content.png"
-+++
-Images should live in static/images/.
+++
+```
 
-🖼️ Featured Images
-Anatole does not natively render .Params.image, so we added a custom override:
+Images should live in `static/images/` and be referenced in content as `/images/<name>`.
 
-Local layout: layouts/_default/single.html
+## Featured images
 
-Code snippet:
+Anatole doesn't automatically render `.Params.image` on single pages here, so we added a small site override in `layouts/_default/single.html`. It outputs the image when `.Params.image` is present:
 
-html
-Copy code
-{{ with .Params.image }}
+```go-html-template
+{{`{{ with .Params.image }}`}}
   <figure class="post-image">
     <img src="{{ . }}" alt="{{ $.Title }}">
   </figure>
-{{ end }}
-This snippet ensures that posts and portfolio items display a featured image if one is defined.
+{{`{{ end }}`}}
+```
 
-🧩 Live Development Notes
-Run locally with:
+## Lists and overrides
 
-bash
-Copy code
+This repository prefers minimal site-level overrides rather than modifying the theme directly. Key files:
+
+- `layouts/partials/list-loop.html` — shared paginator + item loop; centralizes list markup for homepage, posts, and portfolio.
+- `layouts/posts/list.html` and `layouts/portfolio/list.html` — small wrappers that call the shared partial and render section content.
+
+If you need to change how lists render across the site, edit `layouts/partials/list-loop.html` so the change applies everywhere.
+
+## Live development
+
+Run locally:
+
+```powershell
 hugo server -D
-Notes:
+```
 
-Most content or layout changes auto-refresh.
+If you change folder structure or `hugo.toml`, restart the server. To clean old builds:
 
-If you add new folders, change config.toml, or switch themes, restart the server.
-
-To clean old builds:
-
-bash
-Copy code
+```powershell
 hugo --cleanDestinationDir
-🚀 Deployment
-The site is deployed to GitHub Pages using the peaceiris/actions-hugo GitHub Action.
+```
 
-Hugo builds the site into the public/ directory.
+## Deployment
 
-The Action pushes that output to the gh-pages branch.
+Deployment is handled by the peaceiris/actions-hugo GitHub Action which builds `public/` and publishes to GitHub Pages.
 
-The main source branch is hugo.
+## Contributor guidelines
 
-🧠 Guidelines for Copilot and Contributors
-Prefer Hugo shortcodes and Markdown for content, not HTML blocks.
+- Prefer Hugo shortcodes and Markdown for content. Avoid large raw HTML blocks unless necessary.
+- Store images in `static/images/` and reference them with `/images/<file>` in content.
+- Use `categories = ["Portfolio"]` for portfolio items.
+- Do not commit `public/` or `resources/_gen/` to the repository.
+- Avoid editing files inside `themes/`; use `layouts/` overrides instead.
+- Configuration for this project is in `hugo.toml`.
 
-Use relative image paths under /images/.
-
-Use categories = ["Portfolio"] to distinguish project pages.
-
-Don’t commit the public/ or resources/_gen/ directories.
-
-When adding new features, override layouts in layouts/ rather than editing the theme directly.
-
-Keep configuration in config.toml organized and commented for clarity.
+If you need help with list rendering, thumbnails, or moving content from an old Jekyll site, check the `layouts/partials/list-loop.html` partial and the `content/portfolio/` folder for examples.
