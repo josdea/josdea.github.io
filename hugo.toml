@@ -1,0 +1,76 @@
+baseURL = 'https://thejoshdean.com/'
+languageCode = 'en-us'
+title = 'Josh Dean'
+theme = "anatole"
+
+ 
+[params]
+  profilePicture = "images/profile.jpg"
+  Title = "Josh Dean"
+  Description = "Portfolio, experiments, things learned, and things that I'm learning!"
+  mainSections = ["posts", "portfolio"]
+  favicon = "images/"
+  singleDateFormat = "01/02/2006"
+  indexDateFormat = "01/02/2006"
+  listDateFormat = "01/02/2006"
+  [[params.socialIcons]]
+    icon = "fa-brands fa-linkedin"
+    title = "Linkedin"
+    url = "https://www.linkedin.com/in/josdea/"
+
+  [[params.socialIcons]]
+    icon = "fa-brands fa-github"
+    title = "GitHub"
+    url = "https://github.com/josdea"
+
+  [[params.socialIcons]]
+    icon = "fa-brands fa-instagram"
+    title = "instagram"
+    url = "https://www.instagram.com/josdea/"
+
+  [[params.socialIcons]]
+    icon = "fa-solid fa-envelope"
+    title = "e-mail"
+    url = "mailto:josdea@gmail.com"
+
+
+
+
+[menu]
+
+  [[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "portfolio"
+  name = "Portfolio"
+  url = "/portfolio/"
+  weight = 3
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 4
+
+  [[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
+
+
+[services]
+# Enable Disqus.Disqus.Shortname
+  [services.disqus]
+    shortname = '@josdea'
+

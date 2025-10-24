@@ -1,2 +1,3 @@
-# josdea.github.io
-Josh Dean Site
+This repository contains the source for the personal site thejoshdean.com, built with Hugo and the Anatole theme.
+
+Content is written in Markdown and organized under `content/posts/` for blog posts and `content/portfolio/` for project pages; small site-level layout overrides live in `layouts/` to customize list rendering and featured images. The site is built with Hugo and deployed via GitHub Actions to GitHub Pages.

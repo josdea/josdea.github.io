@@ -1,0 +1,4 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ partial "list-loop.html" (dict "ctx" . "pages" .Pages) }}
+{{ end }}
