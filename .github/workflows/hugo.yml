@@ -12,11 +12,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+
+      - name: Setup Dart Sass
+        run: |
+          wget -q https://github.com/sass/dart-sass/releases/download/1.83.1/dart-sass-1.83.1-linux-x64.tar.gz
+          tar -xzf dart-sass-1.83.1-linux-x64.tar.gz
+          sudo cp -r dart-sass/* /usr/local/bin/
 
       - name: Build
         run: hugo --minify
