@@ -22,9 +22,11 @@ jobs:
 
       - name: Setup Dart Sass
         run: |
-          wget -q https://github.com/sass/dart-sass/releases/download/1.83.1/dart-sass-1.83.1-linux-x64.tar.gz
-          tar -xzf dart-sass-1.83.1-linux-x64.tar.gz
-          sudo cp -r dart-sass/* /usr/local/bin/
+          DART_SASS_VERSION="1.83.1"
+          wget -q https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
+          echo "0debcaf1e3de620d9d2aea205ce8a9a19e5a25641ee34578868536297646b33e  dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" | sha256sum -c
+          tar -xzf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
+          sudo cp dart-sass/sass /usr/local/bin/sass
 
       - name: Build
         run: hugo --minify
