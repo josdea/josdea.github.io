@@ -74,3 +74,6 @@ theme = "anatole"
   [services.disqus]
     shortname = '@josdea'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
