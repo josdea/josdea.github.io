@@ -10,6 +10,7 @@ theme = "anatole"
   Description = "Portfolio, experiments, things learned, and things that I'm learning!"
   mainSections = ["posts", "portfolio"]
   favicon = "images/"
+  doNotLoadAnimations = true
   singleDateFormat = "01/02/2006"
   indexDateFormat = "01/02/2006"
   listDateFormat = "01/02/2006"

@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - master
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,7 +22,7 @@ jobs:
       GO_VERSION: 1.25.3
       HUGO_VERSION: 0.152.2
       NODE_VERSION: 22.20.0
-      TZ: Europe/Oslo
+      TZ: America/New_York
     steps:
       - name: Checkout
         uses: actions/checkout@v5
